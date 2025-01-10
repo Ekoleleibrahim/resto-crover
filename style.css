@@ -39,6 +39,7 @@ body{
 h1{
     font-family: dmSerif2, sans-serif;
     font-size: 3.75em;
+    text-transform: uppercase;
 }
 
 .flex{
@@ -51,14 +52,14 @@ img{
 }
 
 svg{
-    height: 24px;
+    height: 16px;
 }
 
 a{
     display: inline-block;
     text-decoration: none;
     color: var(--black);
-    font-family: dmSerif1, sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 .large-number{
@@ -74,10 +75,6 @@ input{
     display: none;
 }
 
-/* span{
-    display: inline-block;
-} */
-
 /* Header */
 header.header-main{
     padding: 30px 50px;
@@ -86,6 +83,7 @@ header.header-main a{
     font-size: 18px;
     padding: 10px 16px;
     position: relative;
+    font-family: dmSerif1, sans-serif;
 }
 header.header-main a:hover{
     color: var(--white);
@@ -388,11 +386,83 @@ label#burger .sous-menu a{
     box-shadow: 0 0 8px var(--black);
 }
 
-
+/* Section five */
+#section-five{
+    padding: 150px 40px;
+    background-color: var(--white);
+}
+#section-five header{
+    max-width: 1024px;
+    min-width: 100%;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+#section-five .flex-section-five{
+    justify-content: space-between;
+    gap: 40px;
+}
+#section-five .flex-section-five img{
+    border-radius: 50%;
+}
+#section-five .flex-section-five div:nth-child(1){
+    flex: 1;
+}
+#section-five .flex-section-five div:nth-child(2){
+    flex: 2;
+}
+#section-five .flex-section-five div:nth-child(3){
+    flex: 1;
+}
+#section-five .flex-section-five div:nth-child(1) .content-flex-five,
+#section-five .flex-section-five div:nth-child(3) .content-flex-five{
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 10px;
+}
+#section-five .flex-section-five div:nth-child(1) .content-flex-five a,
+#section-five .flex-section-five div:nth-child(3) .content-flex-five a{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+#section-five .flex-section-five div:nth-child(2) .relative{
+    position: relative;
+}
+#section-five .flex-section-five div:nth-child(2) .absolute{
+    position: absolute;
+    right: -30px;
+    top: 80%;
+    transform: translate(-50%, -50%);
+}
+#section-five .flex-section-five div:nth-child(2) .absolute a{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 50%;
+    transition: all 200ms ease;
+}
+#section-five .flex-section-five div:nth-child(2) .absolute a:hover{
+    box-shadow: 0 0 8px var(--black);
+}
 
 @media (max-width: 1024px) {
     h1{
         font-size: 3em;
+    }
+    #section-two img,
+    #section-three img,
+    #section-for img,
+    #section-five img{
+        width: 50%;
+        min-width: 100%;
+        display: block;
+        margin: auto;
     }
     /* Header */
     header.header-main{
@@ -415,6 +485,7 @@ label#burger .sous-menu a{
     #ctn-menu:has(:checked) label#burger .logo-burger2{
         position: relative;
         z-index: 1000;
+        margin-bottom: 30px;
     }
     #ctn-menu:has(:checked) label#burger .sous-menu{
         display: flex;
@@ -498,6 +569,13 @@ label#burger .sous-menu a{
         align-items: center;
         justify-content: space-between;
     }
+    #section-two .section-two-description .flex img{
+        float: left;
+        margin-right: 10px;
+        min-width: 80px;
+        min-height: 80px;
+        border-radius: 50%;
+    }
 
     /* Section three */
     #section-three{
@@ -548,6 +626,22 @@ label#burger .sous-menu a{
         min-height: auto;
         border-radius: 4px;
         padding: 10px 18px;
+    }
+    /* Section five */
+    #section-five{
+        padding: 150px 24px;
+        background-color: var(--white);
+    }
+    #section-five header{
+        text-align: left;
+    }
+    #section-five .flex-section-five{
+        flex-direction: column;
+        gap: 50px;
+    }
+    #section-five .flex-section-five div:nth-child(1) .content-flex-five,
+    #section-five .flex-section-five div:nth-child(3) .content-flex-five{
+        text-align: center;
     }
 }
 
