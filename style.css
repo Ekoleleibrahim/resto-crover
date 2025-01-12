@@ -46,6 +46,10 @@ h1{
     display: flex;
 }
 
+.grid{
+    display: grid;
+}
+
 img{
     width: 100%;
     object-fit: cover;
@@ -342,6 +346,9 @@ label#burger .sous-menu a{
     padding: 10px 10px 10px 0;
 }
 #section-three .flex-column3 div:nth-child(2) a:hover{
+    font-weight: bold;
+}
+#section-three .flex-column3 div:nth-child(2) a:hover{
     border-bottom: 2px solid var(--black);
 }
 #section-three .flex-column3 div:nth-child(2) ul li:last-child a{
@@ -384,6 +391,39 @@ label#burger .sous-menu a{
 }
 #section-three .flex-column2 div:nth-child(3) a:hover{
     box-shadow: 0 0 8px var(--black);
+}
+
+/* Section for */
+#section-for{
+    padding: 100px 40px;
+}
+#section-for h1{
+    text-align: center;
+}
+#section-for .grid{
+    margin-top: 50px;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+}
+#section-for .grid img{
+    border-radius: 50%;
+}
+#section-for .flex{
+    flex-direction: column;
+    gap: 100px;
+}
+#section-for .flex section .ctn-btn{
+    margin-top: 20px;
+}
+#section-for .flex section .ctn-btn a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--black);
+    padding: 10px 0;
+}
+#section-for .flex section .ctn-btn a:hover{
+    font-weight: bold;
 }
 
 /* Section five */
@@ -463,15 +503,16 @@ footer form{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 280px;
 }
 footer form input{
-    max-width: 500px;
-    width: 100%;
-    display: inline-block;
-    padding: 14px 20px;
+    max-width: 800px;
+    width: 500%;
+    display: block;
+    padding: 16px 20px;
     border: 1px solid var(--black);
     border-radius: 999px;
+    font-size: 18px;
 }
 footer form input::placeholder{
     color: var(--black);
@@ -487,12 +528,11 @@ footer form button{
     cursor: pointer;
 }
 footer form button:focus{
-    outline-offset: 2px;
+    outline-offset: 1px;
     outline: 2px solid var(--black);
 }
 footer .grid{
     margin: 40px 0 40px;
-    display: grid;
     grid-template-columns: 2fr repeat(4, 1fr);
     gap: 60px;
 }
@@ -500,6 +540,9 @@ footer .grid ul{
     display: inline-flex;
     flex-direction: column;
     gap: 20px;
+}
+footer .grid ul a:hover{
+    font-weight: bold;
 }
 footer .copyright{
     text-align: center;
@@ -509,6 +552,7 @@ footer .copyright{
 @media (max-width: 1024px) {
     h1{
         font-size: 3em;
+        text-align: center;
     }
     #section-two img,
     #section-three img,
@@ -682,6 +726,24 @@ footer .copyright{
         border-radius: 4px;
         padding: 10px 18px;
     }
+
+    /* Section for */
+    #section-for{
+        padding: 100px 24px;
+    }
+    #section-for h1{
+        text-align: center;
+    }
+    #section-for .grid{
+        margin-top: 80px;
+        grid-template-columns: 100%;
+        gap: 40px;
+    } 
+    #section-for .grid .flex{
+        flex-direction: row;
+        gap: 50px;
+    }
+
     /* Section five */
     #section-five{
         padding: 150px 24px;
@@ -704,7 +766,6 @@ footer .copyright{
         padding: 50px 24px 20px;
     }
     footer form{
-        width: auto;
         display: block;
     }
     footer form input{
@@ -714,13 +775,28 @@ footer .copyright{
     footer form button{
         width: 100%;
     }
+    footer form button:focus{
+        outline-offset: 2px;
+    }
     footer .grid{
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 100%;
+        place-items: center;
+        text-align: center;
         gap: 40px;
+    }
+    footer .grid div:nth-child(1){
+        text-align: justify;
+    }
+    footer .grid div:nth-child(1) h2{
+        text-align: center;
     }
 }
 
 @media (max-width: 640px) {
+    h1,
+    #section-for h1{
+        text-align: left;
+    }
     header.header-main .flex-header{
         flex-direction: column;
         align-items: start;
@@ -744,6 +820,11 @@ footer .copyright{
     }
     footer .grid{
         grid-template-columns: 100%;
+        place-items: start;
+        text-align: justify;
+    }
+    footer .grid div:nth-child(1) h2{
+        text-align: left;
     }
 }
 
